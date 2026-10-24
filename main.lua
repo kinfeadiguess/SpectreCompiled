@@ -84,7 +84,7 @@ end
 if not isfile('spectre/profiles/gui.txt') then
 	writefile('spectre/profiles/gui.txt', 'new')
 end
-local gui = 'new'--readfile('spectre/profiles/gui.txt')
+local gui = 'new/init'--readfile('spectre/profiles/gui.txt')
 
 if not isfolder('spectre/assets/'..gui) then
 	makefolder('spectre/assets/'..gui)
