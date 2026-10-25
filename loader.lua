@@ -11,7 +11,7 @@ end
 local function downloadFile(path, func)
 	if not isfile(path) then
 		local suc, res = pcall(function()
-			return game:HttpGet('https://raw.githubusercontent.com/YOUR_USERNAME/SpectreCompiled/'..readfile('spectre/profiles/commit.txt')..'/'..select(1, path:gsub('spectre/', '')), true)
+			return game:HttpGet('https://raw.githubusercontent.com/kinfeadiguess/SpectreCompiled/'..readfile('spectre/profiles/commit.txt')..'/'..select(1, path:gsub('spectre/', '')), true)
 		end)
 		if not suc or res == '404: Not Found' then
 			error(res)
@@ -42,7 +42,7 @@ end
 
 if not shared.SpectreDeveloper then
 	local _, subbed = pcall(function()
-		return game:HttpGet('https://github.com/YOUR_USERNAME/SpectreCompiled')
+		return game:HttpGet('https://github.com/kinfeadiguess/SpectreCompiled')
 	end)
 
 	local assetVer = '1'
