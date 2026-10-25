@@ -24,7 +24,7 @@ local playersService = cloneref(game:GetService('Players'))
 local function downloadFile(path, func)
 	if not isfile(path) then
 		local suc, res = pcall(function()
-			return game:HttpGet('https://raw.githubusercontent.com/YOUR_USERNAME/SpectreCompiled/'..readfile('spectre/profiles/commit.txt')..'/'..select(1, path:gsub('spectre/', '')), true)
+			return game:HttpGet('https://raw.githubusercontent.com/kinfeadiguess/SpectreCompiled/'..readfile('spectre/profiles/commit.txt')..'/'..select(1, path:gsub('spectre/', '')), true)
 		end)
 		if not suc or res == '404: Not Found' then
 			error(res)
@@ -56,7 +56,7 @@ local function finishLoading()
 				if shared.SpectreDeveloper then
 					loadstring(readfile('spectre/loader.lua'), 'loader')()
 				else
-					loadstring(game:HttpGet('https://raw.githubusercontent.com/YOUR_USERNAME/SpectreCompiled/'..readfile('spectre/profiles/commit.txt')..'/loader.lua', true), 'loader')()
+					loadstring(game:HttpGet('https://raw.githubusercontent.com/kinfeadiguess/SpectreCompiled/'..readfile('spectre/profiles/commit.txt')..'/loader.lua', true), 'loader')()
 				end
 			]]
 
